@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTTTRANSLATE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        /* NAVEGACIÓN */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #1e90ff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        nav .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(to right, #1e90ff, #00bfff);
+            color: white;
+            padding: 120px 20px 60px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #1e90ff;
+            text-align: center;
+        }
+
+        /* TARJETAS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .card.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* IMÁGENES CON ZOOM */
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #1e90ff;
+        }
+
+        /* BOTONES */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            margin-top: 15px;
+            border-radius: 50px;
+            background: #1e90ff;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffeb3b;
+            color: #333;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffeb3b;
+        }
+
+        .spacer {
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+        <div class="logo">ModName</div>
+        <div class="menu">
+            <a href="#about">Qué hace</a>
+            <a href="#how">Cómo funciona</a>
+            <a href="#gallery">Galería</a>
+        </div>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <!-- HEADER -->
+    <header>
+        <h1>CTTTRANSLATE</h1>
+        <p>La mejor manera de mejorar tu experiencia en Minetest</p>
+        <a href="#about" class="btn">Saber más</a>
+    </header>
+
+    <!-- SECCIÓN: Qué hace -->
+    <section id="about">
+        <h2>Qué hace</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Función 1</h3>
+                <p>Explicación corta de esta función y cómo ayuda al jugador.</p>
+            </div>
+            <div class="card">
+                <h3>Función 2</h3>
+                <p>Otra función importante del mod con breve descripción.</p>
+            </div>
+            <div class="card">
+                <h3>Función 3</h3>
+                <p>Describe otra característica clave o divertida del mod.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Cómo funciona -->
+    <section id="how">
+        <h2>Cómo funciona</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="ruta/a/tu/imagen1.png" alt="Paso 1">
+                <h3>Paso 1</h3>
+                <p>Explicación del primer paso de uso del mod.</p>
+            </div>
+            <div class="card">
+                <img src="ruta/a/tu/imagen2.png" alt="Paso 2">
+                <h3>Paso 2</h3>
+                <p>Explicación del segundo paso de uso del mod.</p>
+            </div>
+            <div class="card">
+                <img src="ruta/a/tu/imagen3.png" alt="Paso 3">
+                <h3>Paso 3</h3>
+                <p>Explicación del tercer paso de uso del mod.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Galería -->
+    <section id="gallery">
+        <h2>Galería</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="ruta/a/imagen_mod1.png" alt="Imagen 1">
+            </div>
+            <div class="card">
+                <img src="ruta/a/imagen_mod2.png" alt="Imagen 2">
+            </div>
+            <div class="card">
+                <img src="ruta/a/imagen_mod3.png" alt="Imagen 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 crisdan99 | 
+            <a href="https://github.com/tuusuario/repositorio-mod" target="_blank">GitHub</a> | 
+            <a href="https://content.db.link/mod" target="_blank">Content DB</a>
+        </p>
+    </footer>
+
+    <!-- SCRIPT ANIMACIONES -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        function checkCards() {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+
+                if(cardTop < triggerBottom) {
+                    card.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkCards);
+        window.addEventListener('load', checkCards);
+    </script>
+
+</body>
+  </html>
