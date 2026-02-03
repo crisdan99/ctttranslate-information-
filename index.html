@@ -18,7 +18,6 @@
             color: #333;
         }
 
-        /* NAVEGACIÓN */
         nav {
             position: fixed;
             top: 0;
@@ -50,7 +49,6 @@
             font-weight: bold;
         }
 
-        /* HEADER */
         header {
             background: linear-gradient(to right, #1e90ff, #00bfff);
             color: white;
@@ -68,7 +66,6 @@
             opacity: 0.9;
         }
 
-        /* SECCIONES */
         section {
             padding: 60px 20px;
             max-width: 1200px;
@@ -82,7 +79,6 @@
             text-align: center;
         }
 
-        /* TARJETAS */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -94,7 +90,7 @@
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s, opacity 0.6s, transform 0.6s;
+            transition: transform 0.6s, box-shadow 0.3s, opacity 0.6s;
             opacity: 0;
             transform: translateY(50px);
         }
@@ -104,7 +100,6 @@
             transform: translateY(0);
         }
 
-        /* IMÁGENES CON ZOOM */
         .card img {
             width: 100%;
             border-radius: 10px;
@@ -122,7 +117,6 @@
             color: #1e90ff;
         }
 
-        /* BOTONES */
         .btn {
             display: inline-block;
             padding: 10px 25px;
@@ -140,7 +134,6 @@
             color: #333;
         }
 
-        /* FOOTER */
         footer {
             background-color: #222;
             color: white;
@@ -166,109 +159,100 @@
 </head>
 <body>
 
-    <!-- NAVEGACIÓN -->
-    <nav>
-        <div class="logo">ModName</div>
-        <div class="menu">
-            <a href="#about">Qué hace</a>
-            <a href="#how">Cómo funciona</a>
-            <a href="#gallery">Galería</a>
+<nav>
+    <div class="logo">CTTTranslate</div>
+    <div class="menu">
+        <a href="#about">Qué hace</a>
+        <a href="#how">Cómo funciona</a>
+        <a href="#gallery">Galería</a>
+    </div>
+</nav>
+
+<div class="spacer"></div>
+
+<header>
+    <h1>CTTTRANSLATE</h1>
+    <p>Traducción automática del chat en Minetest, en tiempo real</p>
+    <a href="#about" class="btn">Descubrir</a>
+</header>
+
+<section id="about">
+    <h2>Qué hace</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Traducción en vivo</h3>
+            <p>Traduce automáticamente los mensajes del chat a tu idioma sin salir del juego.</p>
         </div>
-    </nav>
-
-    <div class="spacer"></div>
-
-    <!-- HEADER -->
-    <header>
-        <h1>CTTTRANSLATE</h1>
-        <p>La mejor manera de mejorar tu experiencia en Minetest</p>
-        <a href="#about" class="btn">Saber más</a>
-    </header>
-
-    <!-- SECCIÓN: Qué hace -->
-    <section id="about">
-        <h2>Qué hace</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Función 1</h3>
-                <p>Explicación corta de esta función y cómo ayuda al jugador.</p>
-            </div>
-            <div class="card">
-                <h3>Función 2</h3>
-                <p>Otra función importante del mod con breve descripción.</p>
-            </div>
-            <div class="card">
-                <h3>Función 3</h3>
-                <p>Describe otra característica clave o divertida del mod.</p>
-            </div>
+        <div class="card">
+            <h3>Multijugador global</h3>
+            <p>Permite comunicarte con jugadores de otros países sin barreras de idioma.</p>
         </div>
-    </section>
-
-    <!-- SECCIÓN: Cómo funciona -->
-    <section id="how">
-        <h2>Cómo funciona</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="ruta/a/tu/imagen1.png" alt="Paso 1">
-                <h3>Paso 1</h3>
-                <p>Explicación del primer paso de uso del mod.</p>
-            </div>
-            <div class="card">
-                <img src="ruta/a/tu/imagen2.png" alt="Paso 2">
-                <h3>Paso 2</h3>
-                <p>Explicación del segundo paso de uso del mod.</p>
-            </div>
-            <div class="card">
-                <img src="ruta/a/tu/imagen3.png" alt="Paso 3">
-                <h3>Paso 3</h3>
-                <p>Explicación del tercer paso de uso del mod.</p>
-            </div>
+        <div class="card">
+            <h3>Ligero y compatible</h3>
+            <p>Funciona como un mod Lua optimizado, compatible con servidores y mundos existentes.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- SECCIÓN: Galería -->
-    <section id="gallery">
-        <h2>Galería</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="ruta/a/imagen_mod1.png" alt="Imagen 1">
-            </div>
-            <div class="card">
-                <img src="ruta/a/imagen_mod2.png" alt="Imagen 2">
-            </div>
-            <div class="card">
-                <img src="ruta/a/imagen_mod3.png" alt="Imagen 3">
-            </div>
+<section id="how">
+    <h2>Cómo funciona</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="ruta/a/imagen1.png" alt="Instalación">
+            <h3>Instalación</h3>
+            <p>Instalás el mod CTTTranslate en tu mundo o servidor como cualquier otro mod.</p>
         </div>
-    </section>
+        <div class="card">
+            <img src="ruta/a/imagen2.png" alt="Configuración">
+            <h3>Configuración</h3>
+            <p>Seleccionás tu idioma desde el chat o mediante comandos simples.</p>
+        </div>
+        <div class="card">
+            <img src="ruta/a/imagen3.png" alt="Uso">
+            <h3>Uso en el chat</h3>
+            <p>Los mensajes se traducen automáticamente mientras jugás.</p>
+        </div>
+    </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 crisdan99 | 
-            <a href="https://github.com/tuusuario/repositorio-mod" target="_blank">GitHub</a> | 
-            <a href="https://content.db.link/mod" target="_blank">Content DB</a>
-        </p>
-    </footer>
+<section id="gallery">
+    <h2>Galería</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="ruta/a/imagen_mod1.png" alt="Chat traducido">
+        </div>
+        <div class="card">
+            <img src="ruta/a/imagen_mod2.png" alt="Configuración">
+        </div>
+        <div class="card">
+            <img src="ruta/a/imagen_mod3.png" alt="Servidor">
+        </div>
+    </div>
+</section>
 
-    <!-- SCRIPT ANIMACIONES -->
-    <script>
-        const cards = document.querySelectorAll('.card');
+<footer>
+    <p>&copy; 2026 Cristian Brito |
+        <a href="https://github.com/tuusuario/CTTTranslate" target="_blank">GitHub</a> |
+        <a href="#" target="_blank">Content DB</a>
+    </p>
+</footer>
 
-        function checkCards() {
-            const triggerBottom = window.innerHeight * 0.85;
+<script>
+    const cards = document.querySelectorAll('.card');
 
-            cards.forEach(card => {
-                const cardTop = card.getBoundingClientRect().top;
+    function checkCards() {
+        const triggerBottom = window.innerHeight * 0.85;
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                card.classList.add('show');
+            }
+        });
+    }
 
-                if(cardTop < triggerBottom) {
-                    card.classList.add('show');
-                }
-            });
-        }
-
-        window.addEventListener('scroll', checkCards);
-        window.addEventListener('load', checkCards);
-    </script>
+    window.addEventListener('scroll', checkCards);
+    window.addEventListener('load', checkCards);
+</script>
 
 </body>
-  </html>
+                </html>
